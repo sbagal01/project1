@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header.js';
+import  Body from './components/body/body.js';
+import Footer from './components/Footer/Footer.js'
+import Navbar from './components/Navbar/Navbar.js';
+import Carousel from './components/Carousel/Carousel.js'
+import Category from './components/Categories/Category.js';
+import {Myinterceptor,myInterceptor2,myInterceptor3} from './components/http/Myinterceptor.js';
 
-function App() {
+
+Myinterceptor();
+myInterceptor2();
+myInterceptor3();
+function App({name}) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {/* <Header /> */}
+    <Navbar />
+
+    {/* <Category/> */}
+    {/* <Carousel/> */}
+    <Body/>
+    {/* <Footer /> */}
     </div>
   );
 }
